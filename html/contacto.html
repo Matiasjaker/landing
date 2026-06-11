@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axel | Contacto</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <div class="matrix-rain-bg" aria-hidden="true">
+        <div class="matrix-col" style="--x:5%; --d:22s; --dl:0s">1011001100110011</div>
+        <div class="matrix-col" style="--x:12%; --d:18s; --dl:3s">0100101001010010</div>
+        <div class="matrix-col" style="--x:19%; --d:25s; --dl:1s">1100110011001100</div>
+        <div class="matrix-col" style="--x:26%; --d:20s; --dl:4s">{}(){}10110{}</div>
+        <div class="matrix-col" style="--x:33%; --d:23s; --dl:2s">0110100101101001</div>
+        <div class="matrix-col" style="--x:40%; --d:19s; --dl:5s">$#@%&amp;!$#@%!0</div>
+        <div class="matrix-col" style="--x:47%; --d:26s; --dl:0s">1001100110011001</div>
+        <div class="matrix-col" style="--x:54%; --d:21s; --dl:3s">!*+=!*+=1011</div>
+        <div class="matrix-col" style="--x:61%; --d:24s; --dl:1s">0011001100110011</div>
+        <div class="matrix-col" style="--x:68%; --d:18s; --dl:4s">1100110011001100</div>
+        <div class="matrix-col" style="--x:75%; --d:27s; --dl:2s">[]()[]{}10110</div>
+        <div class="matrix-col" style="--x:82%; --d:20s; --dl:5s">01100110011001</div>
+        <div class="matrix-col" style="--x:89%; --d:22s; --dl:0s">100110011001$10</div>
+        <div class="matrix-col" style="--x:96%; --d:19s; --dl:3s">*#$%*#$%0110</div>
+        <div class="matrix-col" style="--x:8%; --d:25s; --dl:2s">111001110011!01</div>
+        <div class="matrix-col" style="--x:30%; --d:21s; --dl:4s">0011001100110{}</div>
+        <div class="matrix-col" style="--x:50%; --d:23s; --dl:1s">(){}(){}10110</div>
+        <div class="matrix-col" style="--x:72%; --d:26s; --dl:5s">101100110011$%#</div>
+    </div>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="contacto.html" class="active">Contacto</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">🌙</button>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Hablemos</h2>
+            <p>Completa el formulario o utiliza los medios de contacto. Responderé lo antes posible.</p>
+
+            <div class="contacto-grid">
+                <form action="#" method="post" class="glass">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+
+                    <button type="submit" class="btn">Enviar mensaje</button>
+                </form>
+
+                <aside class="info-contacto glass">
+                    <h3>Información de contacto</h3>
+
+                    <div class="info-item">
+                        <strong>Email</strong>
+                        <span>axel@devstudio.cl</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Ubicación</strong>
+                        <span>Disponible para trabajo remoto</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Horario</strong>
+                        <span>Lunes a Viernes · 9:00 - 18:00</span>
+                    </div>
+
+                    <div class="redes">
+                        <a href="#">GitHub</a>
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Axel. Todos los derechos reservados.</p>
+        <p class="footer-links">
+            <a href="index.html">Inicio</a>·
+            <a href="servicios.html">Servicios</a>·
+            <a href="proyectos.html">Proyectos</a>·
+            <a href="contacto.html">Contacto</a>
+        </p>
+    </footer>
+
+<script>
+    const toggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark') {
+        html.setAttribute('data-theme', 'dark');
+        toggle.textContent = '☀️';
+    }
+    toggle.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        if (current === 'dark') {
+            html.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'light');
+            toggle.textContent = '🌙';
+        } else {
+            html.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            toggle.textContent = '☀️';
+        }
+    });
+</script>
+
+</body>
+</html>
